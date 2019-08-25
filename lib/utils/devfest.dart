@@ -33,13 +33,14 @@ class Devfest {
 
   //* Images
   static const String home_img = "assets/images/home_img.jpeg";
-  static const String banner_light = "assets/images/banner_light.png";
-  static const String banner_dark = "assets/images/banner_dark.png";
+//  static const String banner_light = "assets/images/banner_light.png";
+  static const String banner_light = "assets/images/purvodaya.gif";
+  static const String banner_dark = "assets/images/purvodaya.gif";
 
   //*  Texts
-  static const String welcomeText = "Welcome to GDG DevFest";
+  static const String welcomeText = "Welcome to Purvodaya 2020";
   static const String descText =
-      '''DevFests are community-led, developer events hosted by GDG chapters around the globe focused on community building & learning about Google’s technologies. Each DevFest is inspired by and uniquely tailored to the needs of the developer community and region that hosts it.''';
+      '''Purvodaya, the annual B-School festival of Vinod Gupta School of Management, IIT Kharagpur is an amalgamation of events spread across all the domains of business and management. Spread across 3 days, it provides an ideal platform for the budding managers and innovators of today to hone their skills and test their mettle against their peers. The event hosts a complete business extravaganza.''';
 
   static const String loading_text = "Loading...";
   static const String try_again_text = "Try Again";
