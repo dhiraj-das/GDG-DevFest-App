@@ -81,24 +81,23 @@ class Event {
 List<Event> events = [
   Event(
     eventImage:
-        "https://avatars1.githubusercontent.com/u/12619420?s=400&u=eac38b075e4e4463edfb0f0a8972825cf7803d4c&v=4",
+        "https://firebasestorage.googleapis.com/v0/b/purvodaya-app.appspot.com/o/clubs_committees%2Flogo%20cmi.png?alt=media&token=175a3326-443b-42a9-85c8-86caf58613f8",
     eventName: "Leadership Summit",
     eventDesc: "",
-    eventSession: "Talk: Getting Started With Flutter For Web",
-    fbUrl: "https://facebook.com/imthepk",
-    githubUrl: "https://github.com/iampawan",
-    linkedinUrl: "https://linkedin.com/in/imthepk",
-    twitterUrl: "https://twitter.com/imthepk",
+    eventSession: "",
   ),
   Event(
     eventImage:
-    "https://avatars1.githubusercontent.com/u/12619420?s=400&u=eac38b075e4e4463edfb0f0a8972825cf7803d4c&v=4",
-    eventName: "Pawan Kumar",
-    eventDesc: "Google Developer Expert, Flutter",
-    eventSession: "Talk: Getting Started With Flutter For Web",
-    fbUrl: "https://facebook.com/imthepk",
-    githubUrl: "https://github.com/iampawan",
-    linkedinUrl: "https://linkedin.com/in/imthepk",
-    twitterUrl: "https://twitter.com/imthepk",
+    "https://firebasestorage.googleapis.com/v0/b/purvodaya-app.appspot.com/o/clubs_committees%2FAlumni.jpg?alt=media&token=9c5c5feb-5cb7-4e30-a2c5-1bfe512e57ef",
+    eventName: "Reminiscence",
+    eventDesc: "",
+    eventSession: "Inviting alumni to share their success stories with the students and give the alumni a chance to relive their memories.",
+  ),
+  Event(
+    eventImage:
+    "https://firebasestorage.googleapis.com/v0/b/purvodaya-app.appspot.com/o/clubs_committees%2FSaamanjasya%20Logo.jpg?alt=media&token=2367dd35-55c2-4510-94fb-ac9e6f7e1606",
+    eventName: "Marathon",
+    eventDesc: "",
+    eventSession: "Inculcating a sense of responsibility for society by organizing CSR activities.",
   ),
 ];

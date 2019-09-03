@@ -33,6 +33,7 @@ class Speaker {
   String githubUrl;
   String speakerSession;
   String sessionId;
+  int year;
 
   Speaker(
       {this.speakerName,
@@ -45,7 +46,9 @@ class Speaker {
       this.linkedinUrl,
       this.githubUrl,
       this.speakerSession,
-      this.sessionId});
+      this.sessionId,
+        this.year,
+      });
 
   Speaker.fromJson(Map<String, dynamic> json) {
     speakerName = json['speaker_name'];
@@ -59,6 +62,7 @@ class Speaker {
     githubUrl = json['github_url'];
     speakerSession = json['speaker_session'];
     sessionId = json['session_id'];
+    year = json['year'];
   }
 
   Map<String, dynamic> toJson() {
@@ -74,6 +78,7 @@ class Speaker {
     data['github_url'] = this.githubUrl;
     data['speaker_session'] = this.speakerSession;
     data['session_id'] = this.sessionId;
+    data['year'] = this.year;
     return data;
   }
 }
@@ -81,90 +86,58 @@ class Speaker {
 List<Speaker> speakers = [
   Speaker(
     speakerImage:
-        "https://avatars1.githubusercontent.com/u/12619420?s=400&u=eac38b075e4e4463edfb0f0a8972825cf7803d4c&v=4",
-    speakerName: "Pawan Kumar",
-    speakerDesc: "Google Developer Expert, Flutter",
-    speakerSession: "Talk: Getting Started With Flutter For Web",
-    fbUrl: "https://facebook.com/imthepk",
-    githubUrl: "https://github.com/iampawan",
-    linkedinUrl: "https://linkedin.com/in/imthepk",
-    twitterUrl: "https://twitter.com/imthepk",
+        "https://firebasestorage.googleapis.com/v0/b/purvodaya-app.appspot.com/o/guests%2F2020%2Famitabh_kant.jpeg?alt=media&token=9e5c9113-5d31-4be2-8b8d-db289d05441f",
+    speakerName: "Mr. Amitabh Kant",
+    speakerDesc: "CEO, NITI Aayog",
+    speakerSession: "Chief Guest",
+    year: 2020,
   ),
   Speaker(
+    speakerSession: "Chief Guest",
     speakerImage:
-        "https://devfest.withgoogle.com/api/assets?path=/gs/gweb-gc-gather-production.appspot.com/files/L2FwcGhvc3RpbmdfZ2xvYmFsL2Jsb2JzL0FFbkIyVW9DRktRcllTZDN1T2VINnhiUC11M2pVUFZFLVI0dVh5czF6d2lKNGRwanJjVjJhWm1zSUJZelVkZzBRaG9uRkNJZmhVZEg3ZGpVV0RhRmpQWXFYeHU0Y1ZDRmROb3FQYnVBQ2VKMWdOSFRHS3B0YWxRLk8xa3k2cVpFOG15UFAyRnk",
-    speakerName: "Laura Morinigo",
-    speakerDesc: "Software Developer, DMod Labs",
-    speakerSession: "How I Became a Mobile Developer with Firebase and Flutter",
-    fbUrl: "https://facebook.com/imthepk",
-    githubUrl: "https://github.com/iampawan",
-    linkedinUrl: "https://linkedin.com/in/imthepk",
-    twitterUrl: "https://twitter.com/imthepk",
+        "https://firebasestorage.googleapis.com/v0/b/purvodaya-app.appspot.com/o/guests%2F2019%2Fyunus.png?alt=media&token=7a8fb099-7a00-4f0a-9ae5-5601ed5bedea",
+    speakerName: "Dr. Muhammad Yunus",
+    speakerDesc: "Nobel Peace Prize Winner",
+    year: 2019,
   ),
   Speaker(
-    speakerSession: "Angular Elements",
+    speakerSession: "Guest of Honour",
     speakerImage:
-        "https://devfest.withgoogle.com/api/assets?path=/gs/gweb-gc-gather-production.appspot.com/files/L2FwcGhvc3RpbmdfZ2xvYmFsL2Jsb2JzL0FFbkIyVXJET043VnFRT2R1UHdyS1lFUElwLVNaYlVVbnc1enJuNTNGbUtQQjR0SF9STVUzMVptdkgzclRpRjhTUDc2WUNvNldKNFVacFhiXzF4bUoxTVc0RzlfXzF3d2tPUXl4NTNSNjBNSzRoaXB1VVBxOTRFLk0yOHMwWm1NeURjaWxQZ1k",
-    speakerName: "Jimenez Raul",
-    speakerDesc: "Software Engineer, Byte Default",
-    fbUrl: "https://facebook.com/imthepk",
-    githubUrl: "https://github.com/iampawan",
-    linkedinUrl: "https://linkedin.com/in/imthepk",
-    twitterUrl: "https://twitter.com/imthepk",
+        "https://firebasestorage.googleapis.com/v0/b/purvodaya-app.appspot.com/o/guests%2F2019%2Fchandra-shekhar-ghosh.jpg?alt=media&token=1f5c3cb6-f950-4e89-91a2-dd761df848a5",
+    speakerName: "Mr. Chandra Shekhar Ghosh",
+    speakerDesc: "MD & CEO of Bandhan Bank Ltd.",
+    year: 2019,
   ),
   Speaker(
-    speakerSession: "Machine Learning and AutoML on GCP",
+    speakerSession: "Guest Speaker",
     speakerImage:
-        "https://devfest.withgoogle.com/api/assets?path=/gs/gweb-gc-gather-production.appspot.com/files/AEnB2UozlnKuWKqwaGjT2U6ylLLyMtoByOnx-ctrRmn5A8kptjCS50E8EgQDSuxYg8chsldOmSLbHScKX0ERlngHvbRp5XVRyNuAUSIm_Hguq3THTisLLaU.UyKUL3gyFQsEAcmO",
-    speakerName: "Sathish V J",
-    speakerDesc: "Tech Architect, Investor, Tutor",
-    fbUrl: "https://facebook.com/imthepk",
-    githubUrl: "https://github.com/iampawan",
-    linkedinUrl: "https://linkedin.com/in/imthepk",
-    twitterUrl: "https://twitter.com/imthepk",
+        "https://firebasestorage.googleapis.com/v0/b/purvodaya-app.appspot.com/o/guests%2F2019%2FBalaji-Viswanathan.png?alt=media&token=71292ff9-3849-4908-bddd-4b1d7bd840ca",
+    speakerName: "Mr. Balaji Viswanathan",
+    speakerDesc: "Most followed writer on Quora",
+    year: 2019,
   ),
   Speaker(
-    speakerSession: "Top 5 from Firebase Summit '18",
+    speakerSession: "",
     speakerImage:
-        "https://devfest.withgoogle.com/api/assets?path=/gs/gweb-gc-gather-production.appspot.com/files/AEnB2UqZAYU9q0R5K2cq94DxU7ebiOMhilDlx5NzzsWWZ_oHxqcZV8H8j594rg_q_vyfTToA0BfScTHOHAj8uKf2OeF5MVqa_jmdjC9JO9-2TcPWjboxPf8.NN-XmkQxmHl1XyY_",
-    speakerName: "Timothy Jordan",
-    speakerDesc: "Sr. Staff Developer Advocate, Google",
-    fbUrl: "https://facebook.com/imthepk",
-    githubUrl: "https://github.com/iampawan",
-    linkedinUrl: "https://linkedin.com/in/imthepk",
-    twitterUrl: "https://twitter.com/imthepk",
+        "https://firebasestorage.googleapis.com/v0/b/purvodaya-app.appspot.com/o/guests%2F2018%2Farundhati_bhattacharya.jpg?alt=media&token=3201d002-faeb-4ffd-a67a-29ac3d75f075",
+    speakerName: "Mrs. Arundhati Bhattacharya",
+    speakerDesc: "Chairman, State Bank of India",
+    year: 2018,
   ),
   Speaker(
-    speakerSession: "Multiplayer Games with WebXR",
+    speakerSession: "",
     speakerImage:
-        "https://devfest.withgoogle.com/api/assets?path=/gs/gweb-gc-gather-production.appspot.com/files/L2FwcGhvc3RpbmdfZ2xvYmFsL2Jsb2JzL0FFbkIyVXJ2Zkg0YUY1ZFJoMFFRbWlqdFE4MV9nNTdJR0dxUS1ubVJfbkN2Y1RaS3VoaUp2dWd3ejNmUmJRekFQaU5QNGhqd1F6cUtKQXpYeXJkemVyS2hUY1NzSWloMXFCNzQzdmpRVVVmU0Z4XzJZRDVZQXVBLnFHVllKVmc2MUVzQVZ5bVI",
-    speakerName: "Tanay Pant",
-    speakerDesc: "Web Developer Advocate, Mozilla Foundation",
-    fbUrl: "https://facebook.com/imthepk",
-    githubUrl: "https://github.com/iampawan",
-    linkedinUrl: "https://linkedin.com/in/imthepk",
-    twitterUrl: "https://twitter.com/imthepk",
+        "https://firebasestorage.googleapis.com/v0/b/purvodaya-app.appspot.com/o/guests%2F2018%2FDr.PAWAN-AGARWAL.jpg?alt=media&token=b7a931cc-bcbb-475b-880a-c3a7b538c86a",
+    speakerName: "Dr. Pawan Agarwal",
+    speakerDesc: "CEO, Mumbai Dabbawala Association",
+    year: 2018,
   ),
   Speaker(
-    speakerSession: "Mobile Database Persistence",
+    speakerSession: "",
     speakerImage:
-        "https://devfest.withgoogle.com/api/assets?path=/gs/gweb-gc-gather-production.appspot.com/files/AEnB2UqEG002BsGCqZLZRFUGu9xo4IpGamz6gTqlWxWyME0s-n8gR7Rs0tM5R6mPMOCRYf5rAunWx0GQeXDUHPag_XWGApdekw.cks8tPlPy-TeucOT",
-    speakerName: "Eric Maxwell",
-    speakerDesc: "Software Developer, Big Nerd Ranch",
-    fbUrl: "https://facebook.com/imthepk",
-    githubUrl: "https://github.com/iampawan",
-    linkedinUrl: "https://linkedin.com/in/imthepk",
-    twitterUrl: "https://twitter.com/imthepk",
-  ),
-  Speaker(
-    speakerSession: "Progressive Experience Web Development",
-    speakerImage:
-        "https://devfest.withgoogle.com/api/assets?path=/gs/gweb-gc-gather-production.appspot.com/files/L2FwcGhvc3RpbmdfZ2xvYmFsL2Jsb2JzL0FFbkIyVXBET0RKT0JBV195UjVuSDRKS3JEenphN2gzLW80WEdvenlGdkZhNGREUzFmQUk1RjJnR0N5eEJIdlBkOVhlLUdwalVSWXlxbXJ4VFA0QXRZdnB4WDllWFNpdmdiNy14Q0tLOENCeU41Yks4NF9vUVQ0LlVFY0RBeld0ZTd4OEtSUTg",
-    speakerName: "Yohan Totting",
-    speakerDesc: "Web Developer Advocate, Google",
-    fbUrl: "https://facebook.com/imthepk",
-    githubUrl: "https://github.com/iampawan",
-    linkedinUrl: "https://linkedin.com/in/imthepk",
-    twitterUrl: "https://twitter.com/imthepk",
+        "https://firebasestorage.googleapis.com/v0/b/purvodaya-app.appspot.com/o/guests%2F2018%2Frashmi_bansal.jpg?alt=media&token=fe252306-bc65-4759-a471-945548d40fdb",
+    speakerName: "Mrs. Rashmi Bansal",
+    speakerDesc: "Indian non-fiction writer, entrepreneur and youth expert",
+    year: 2018,
   ),
 ];

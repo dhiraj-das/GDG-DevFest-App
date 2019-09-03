@@ -56,6 +56,7 @@ class EventsPage extends StatelessWidget {
           ],
         ),
       );
+
   @override
   Widget build(BuildContext context) {
 //    var _homeBloc = HomeBloc();
@@ -78,7 +79,7 @@ class EventsPage extends StatelessWidget {
                         width: MediaQuery.of(context).size.width * 0.3,
                       ),
                       child: CachedNetworkImage(
-                        fit: BoxFit.cover,
+                        fit: BoxFit.contain,
                         imageUrl: events[i].eventImage,
                       ),
                     ),

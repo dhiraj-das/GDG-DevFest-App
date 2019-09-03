@@ -10,6 +10,7 @@ import 'package:flutter_devfest/universal/dev_scaffold.dart';
 import 'package:flutter_devfest/utils/tools.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:side_header_list_view/side_header_list_view.dart';
 
 class SpeakerPage extends StatelessWidget {
   static const String routeName = "/speakers";
@@ -57,15 +58,28 @@ class SpeakerPage extends StatelessWidget {
           ],
         ),
       );
+
   @override
   Widget build(BuildContext context) {
-    var _homeBloc = HomeBloc();
-    var state = _homeBloc.currentState as InHomeState;
-    var speakers = state.speakersData.speakers;
     return DevScaffold(
-      body: ListView.builder(
-        shrinkWrap: true,
-        itemBuilder: (c, i) {
+      body: new SideHeaderListView(
+        itemCount: speakers.length,
+
+        // Set the height of the item widgets. For now this has to be a fixed height
+        itemExtend: 200.0,
+
+        // Set the header builder, this needs to return the widget for the side header
+        headerBuilder: (BuildContext context, int index){
+          return new SizedBox(
+              width: 64.0,
+              child: new Text("${speakers[index].year}",
+                style: Theme.of(context).textTheme.headline,
+                textAlign: TextAlign.center,)
+          );
+        },
+
+        // Set the item builder, this is everything in the row without the header
+        itemBuilder: (BuildContext context, int index){
           return Card(
             elevation: 0.0,
             child: Padding(
@@ -80,7 +94,7 @@ class SpeakerPage extends StatelessWidget {
                       ),
                       child: CachedNetworkImage(
                         fit: BoxFit.cover,
-                        imageUrl: speakers[i].speakerImage,
+                        imageUrl: speakers[index].speakerImage,
                       ),
                     ),
                     SizedBox(
@@ -97,7 +111,7 @@ class SpeakerPage extends StatelessWidget {
                             mainAxisSize: MainAxisSize.min,
                             children: <Widget>[
                               Text(
-                                speakers[i].speakerName,
+                                speakers[index].speakerName,
                                 style: Theme.of(context).textTheme.title,
                               ),
                               SizedBox(
@@ -115,17 +129,17 @@ class SpeakerPage extends StatelessWidget {
                             height: 10,
                           ),
                           Text(
-                            speakers[i].speakerDesc,
+                            speakers[index].speakerDesc,
                             style: Theme.of(context).textTheme.subtitle,
                           ),
                           SizedBox(
                             height: 10,
                           ),
                           Text(
-                            speakers[i].speakerSession,
+                            speakers[index].speakerSession,
                             style: Theme.of(context).textTheme.caption,
                           ),
-                          socialActions(context, speakers[i]),
+//                          socialActions(context, speakers[index]),
                         ],
                       ),
                     )
@@ -133,9 +147,13 @@ class SpeakerPage extends StatelessWidget {
                 )),
           );
         },
-        itemCount: speakers.length,
+
+        // HasSameHeader will be used to know whether the header has to be shown for a position
+        hasSameHeader: (int a, int b){
+          return speakers[a].year == speakers[b].year;
+        },
       ),
-      title: "Speakers",
+      title: "Guests",
     );
   }
 }
