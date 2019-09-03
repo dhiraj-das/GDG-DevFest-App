@@ -60,7 +60,9 @@ class Devfest {
 
   //* ActionTexts
   static const String agenda_text = "Agenda";
-  static const String speakers_text = "Speakers";
+  static const String event_text = "Events";
+  static const String competitions_text = "Competitions";
+  static const String speakers_text = "Guests";
   static const String team_text = "Team";
   static const String sponsor_text = "Sponsors";
   static const String faq_text = "FAQ";

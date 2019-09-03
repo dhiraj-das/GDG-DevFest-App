@@ -94,12 +94,6 @@ class HomeFront extends StatelessWidget {
         runSpacing: 20.0,
         children: <Widget>[
           ActionCard(
-            icon: Icons.schedule,
-            color: Colors.red,
-            title: Devfest.agenda_text,
-            onPressed: () => Navigator.pushNamed(context, AgendaPage.routeName),
-          ),
-          ActionCard(
             icon: Icons.person,
             color: Colors.green,
             title: Devfest.speakers_text,
@@ -107,10 +101,16 @@ class HomeFront extends StatelessWidget {
                 Navigator.pushNamed(context, SpeakerPage.routeName),
           ),
           ActionCard(
-            icon: Icons.people,
-            color: Colors.amber,
-            title: Devfest.team_text,
-            onPressed: () => Navigator.pushNamed(context, TeamPage.routeName),
+            icon: Icons.event,
+            color: Colors.red,
+            title: Devfest.event_text,
+            onPressed: () => Navigator.pushNamed(context, AgendaPage.routeName),
+          ),
+          ActionCard(
+            icon: FontAwesomeIcons.trophy,
+            color: Colors.brown,
+            title: Devfest.competitions_text,
+            onPressed: () => Navigator.pushNamed(context, AgendaPage.routeName),
           ),
           ActionCard(
             icon: Icons.attach_money,
@@ -119,11 +119,17 @@ class HomeFront extends StatelessWidget {
             onPressed: () =>
                 Navigator.pushNamed(context, SponsorPage.routeName),
           ),
+//          ActionCard(
+//            icon: Icons.question_answer,
+//            color: Colors.brown,
+//            title: Devfest.faq_text,
+//            onPressed: () => Navigator.pushNamed(context, FaqPage.routeName),
+//          ),
           ActionCard(
-            icon: Icons.question_answer,
-            color: Colors.brown,
-            title: Devfest.faq_text,
-            onPressed: () => Navigator.pushNamed(context, FaqPage.routeName),
+            icon: Icons.people,
+            color: Colors.amber,
+            title: Devfest.team_text,
+            onPressed: () => Navigator.pushNamed(context, TeamPage.routeName),
           ),
           ActionCard(
             icon: Icons.map,

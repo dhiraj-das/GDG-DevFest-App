@@ -13,14 +13,14 @@ class MapPage extends StatefulWidget {
 class _MapPageState extends State<MapPage> {
   GoogleMapController _controller;
   bool isMapCreated = false;
-  static final LatLng myLocation = LatLng(37.42796133580664, -122.085749655962);
+  static final LatLng myLocation = LatLng(22.3189182,87.3115263);
 
   @override
   void initState() {
     super.initState();
   }
 
-  final CameraPosition _kGooglePlex = CameraPosition(
+  final CameraPosition _kVGSOM = CameraPosition(
     target: myLocation,
     zoom: 14.4746,
   );
@@ -69,7 +69,7 @@ class _MapPageState extends State<MapPage> {
               myLocationButtonEnabled: true,
               myLocationEnabled: true,
               markers: _createMarker(),
-              initialCameraPosition: _kGooglePlex,
+              initialCameraPosition: _kVGSOM,
               onMapCreated: (GoogleMapController controller) {
                 _controller = controller;
                 isMapCreated = true;
@@ -83,13 +83,13 @@ class _MapPageState extends State<MapPage> {
                   child: RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(
-                        text: "Google Office\n",
+                        text: "Vinod Gupta School of Management\n",
                         style: Theme.of(context).textTheme.title.copyWith(
                               fontWeight: FontWeight.bold,
                             ),
                         children: [
                           TextSpan(
-                              text: "Shoreline Amphitheatre, Mountain View, CA",
+                              text: "IIT Kharagpur",
                               style: Theme.of(context).textTheme.subtitle,
                               children: []),
                         ]),
