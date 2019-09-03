@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_devfest/agenda/agenda_page.dart';
+import 'package:flutter_devfest/competitions/competitions_page.dart';
 import 'package:flutter_devfest/config/index.dart';
 import 'package:flutter_devfest/events/event_page.dart';
 import 'package:flutter_devfest/faq/faq_page.dart';
@@ -66,6 +67,7 @@ class _ConfigPageState extends State<ConfigPage> {
               HomePage.routeName: (context) => HomePage(),
               SpeakerPage.routeName: (context) => SpeakerPage(),
               EventsPage.routeName: (context) => EventsPage(),
+              CompetitionsPage.routeName: (context) => CompetitionsPage(),
               AgendaPage.routeName: (context) => AgendaPage(),
               SponsorPage.routeName: (context) => SponsorPage(),
               TeamPage.routeName: (context) => TeamPage(),

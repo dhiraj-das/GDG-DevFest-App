@@ -81,10 +81,10 @@ class Event {
 List<Event> events = [
   Event(
     eventImage:
-        "https://firebasestorage.googleapis.com/v0/b/purvodaya-app.appspot.com/o/clubs_committees%2Flogo%20cmi.png?alt=media&token=175a3326-443b-42a9-85c8-86caf58613f8",
+        "https://firebasestorage.googleapis.com/v0/b/purvodaya-app.appspot.com/o/clubs_committees%2Fcmi_logo.jpeg?alt=media&token=8f5e019e-8a7d-4ade-b7ba-a38cb6962c4d",
     eventName: "Leadership Summit",
     eventDesc: "",
-    eventSession: "",
+    eventSession: "Ideas and opinions on the latest business trends discussed by the eminent business personalities to inspire young students.",
   ),
   Event(
     eventImage:

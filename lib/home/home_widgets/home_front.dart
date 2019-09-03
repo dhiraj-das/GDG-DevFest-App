@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_devfest/agenda/agenda_page.dart';
+import 'package:flutter_devfest/competitions/competitions_page.dart';
 import 'package:flutter_devfest/config/index.dart';
 import 'package:flutter_devfest/events/event_page.dart';
 import 'package:flutter_devfest/faq/faq_page.dart';
@@ -60,7 +61,7 @@ class HomeFront extends StatelessWidget {
             icon: FontAwesomeIcons.trophy,
             color: Colors.brown,
             title: Devfest.competitions_text,
-            onPressed: () => Navigator.pushNamed(context, AgendaPage.routeName),
+            onPressed: () => Navigator.pushNamed(context, CompetitionsPage.routeName),
           ),
           ActionCard(
             icon: Icons.attach_money,
@@ -97,38 +98,38 @@ class HomeFront extends StatelessWidget {
             IconButton(
               icon: Icon(FontAwesomeIcons.facebookF),
               onPressed: () async {
-                await _launchURL("https://facebook.com/imthepk");
-              },
-            ),
-            IconButton(
-              icon: Icon(FontAwesomeIcons.twitter),
-              onPressed: () async {
-                await _launchURL("https://twitter.com/imthepk");
+                await _launchURL("https://www.facebook.com/Purvodaya.VGSoM");
               },
             ),
             IconButton(
               icon: Icon(FontAwesomeIcons.linkedinIn),
               onPressed: () async {
-                _launchURL("https://linkedin.com/in/imthepk");
+                await _launchURL("https://www.linkedin.com/in/purvodaya-vgsom-iit-kharagpur-54288ab6/");
+              },
+            ),
+            IconButton(
+              icon: Icon(FontAwesomeIcons.instagram),
+              onPressed: () async {
+                _launchURL("https://www.instagram.com/vgsomiitkgp.purvodaya/");
+              },
+            ),
+            IconButton(
+              icon: Icon(FontAwesomeIcons.twitter),
+              onPressed: () async {
+                await _launchURL("https://twitter.com/iampurvodaya?lang=en");
               },
             ),
             IconButton(
               icon: Icon(FontAwesomeIcons.youtube),
               onPressed: () async {
-                await _launchURL("https://youtube.com/mtechviral");
-              },
-            ),
-            IconButton(
-              icon: Icon(FontAwesomeIcons.meetup),
-              onPressed: () async {
-                await _launchURL("https://meetup.com/");
+                await _launchURL("https://www.youtube.com/channel/UCHSL7VrG8kXrCqrkBUctVcw");
               },
             ),
             IconButton(
               icon: Icon(FontAwesomeIcons.envelope),
               onPressed: () async {
                 var emailUrl =
-                    '''mailto:mtechviral@gmail.com?subject=Support Needed For DevFest App&body={Name: Pawan Kumar},Email: pawan221b@gmail.com}''';
+                    '''mailto:vgsomiitkgp.purvodaya@gmail.com?subject=Regarding Purvodaya 2020''';
                 var out = Uri.encodeFull(emailUrl);
                 await _launchURL(out);
               },
